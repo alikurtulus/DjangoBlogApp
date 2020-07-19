@@ -1,0 +1,83 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+<br>
+<br>
+<div class="row">
+    <div class="col">
+        <div class="col">
+            <div class="card  mb-3"  >
+                <div class="card-header">
+                    <h5 class="card-title text-center">Customer</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-success btn-block" >Update Customer</button>
+                    <button type="button" class="btn btn-outline-primary btn-block">Delete Customer</button>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col">
+            <div class="card    mb-3"  >
+                <div class="card-header">
+                    <h5 class="card-title text-center">Contact Information</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Email:</p>
+                    <p class="card-text">Phone:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col">
+            <div class="card  mb-3"  >
+                <div class="card-header text-center">
+                    <h5 class="card-title">Total Orders</h5>
+                </div>
+                <div class="card-body">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card card-body ">
+            <form method="get">
+
+            </form>
+            <button type="button" class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Date Ordered</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
