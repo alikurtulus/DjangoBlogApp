@@ -12,17 +12,20 @@
               <table class="table">
                   <thead>
                     <tr>
+                      <th></th>
                       <th scope="col">Customer</th>
-                      <th scope="col">Orders</th>
+                      <th scope="col">Phone</th>
                     </tr>
                   </thead>
                   <tbody>
+                      {% for customer in customers %}
                       <tr>
-                          <td></td>
+                        <td><a  class="btn btn-success" href="{% url 'customer' customer.id %}">View</a></td>
+                        <td>{{customer.name}}</td>
+                        <td>{{customer.phone}}</td>
                       </tr>
-                      <tr>
-                          <td></td>
-                      </tr>
+                      {% endfor %}
+                      
                   </tbody>
               </table>
           </div>
@@ -45,12 +48,17 @@
               </tr>
             </thead>
             <tbody>
+                {% for order in orders %}
                 <tr>
-                    <td></td>
+                    <td>{{order.product.name}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                    <td><button type="button" class="btn btn-secondary">Update</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
-                <tr>
-                    <td></td>
-                </tr>
+                   
+                {% endfor %}
+               
             </tbody>
         </table>
       </div>

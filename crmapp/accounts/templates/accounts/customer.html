@@ -25,8 +25,8 @@
                     <h5 class="card-title text-center">Contact Information</h5>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Email:</p>
-                    <p class="card-text">Phone:</p>
+                    <p class="card-text">Email:{{customer.email}}</p>
+                    <p class="card-text">Phone:{{customer.phone}}</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <h5 class="card-title">Total Orders</h5>
                 </div>
                 <div class="card-body">
-                 
+                 <p style="text-align: center;padding: 10px;font-size: 1.8rem;" >{{orders_count}}</p> 
                 </div>
             </div>
         </div>
@@ -71,9 +71,16 @@
                   </tr>
                 </thead>
                 <tbody>
+                  {% for order in orders %}
                   <tr>
-                    
+                     <td>{{order.product.name}}</td>
+                     <td>{{order.product.category}}</td>
+                     <td>{{order.date_created}}</td>
+                     <td>{{order.status}}</td>
+                     <td><button type="button" class="btn btn-secondary">Update</button></td>
+                     <td><button type="button" class="btn btn-danger">Remove</button></td>
                   </tr>
+                  {% endfor %}
                  
                 </tbody>
               </table>
