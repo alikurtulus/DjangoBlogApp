@@ -49,9 +49,10 @@
     <div class="col">
         <div class="card card-body ">
             <form method="get">
-
+                {{myFilter.form}}
+                <button  class="btn btn-primary" type="submit">Search</button>
             </form>
-            <button type="button" class="btn btn-primary" type="submit">Search</button>
+         
         </div>
     </div>
 </div>
@@ -63,6 +64,7 @@
                 <thead>
                   <tr>
                     <th scope="col">Product</th>
+                    <th>Note</th>
                     <th scope="col">Category</th>
                     <th scope="col">Date Ordered</th>
                     <th scope="col">Status</th>
@@ -74,6 +76,7 @@
                   {% for order in orders %}
                   <tr>
                      <td>{{order.product.name}}</td>
+                     <td>{{order.note}}</td>
                      <td>{{order.product.category}}</td>
                      <td>{{order.date_created}}</td>
                      <td>{{order.status}}</td>
